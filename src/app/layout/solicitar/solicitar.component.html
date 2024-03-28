@@ -1,0 +1,60 @@
+<div class="main__solicitar">
+  <h1>Solicitar Vacaciones</h1>
+  <form class="form__solicitar">
+    <div class="info__container">
+      <mat-form-field class="input">
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Tipo de documento</mat-label>
+        <mat-select>
+          <mat-option value="ciudadania">Cédula de ciudadanía</mat-option>
+          <mat-option value="extrangeria">Cédula de extranjería</mat-option>
+          <mat-option value="carnet">Carnet de identidad</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Documento de Identidad</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Cargo que desempeña</mat-label>
+        <mat-select>
+          <mat-option value="admin">Administrador</mat-option>
+          <mat-option value="supervisor">Supervisor</mat-option>
+          <mat-option value="empleado">Empleado</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Días de Vacaciones solicitados</mat-label>
+        <input matInput [formControl]="nm_dias_solicita" />
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Fecha de Inicio</mat-label>
+        <input matInput [matDatepicker]="pickerInicio"  />
+        <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+        <mat-datepicker #pickerInicio></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Fecha de terminación</mat-label>
+        <input matInput [matDatepicker]="pickerTerminacion"  />
+        <mat-datepicker-toggle matSuffix [for]="pickerTerminacion"></mat-datepicker-toggle>
+        <mat-datepicker #pickerTerminacion></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Fecha de reintegro</mat-label>
+        <input matInput [matDatepicker]="pickerReintegro"  />
+        <mat-datepicker-toggle matSuffix [for]="pickerReintegro"></mat-datepicker-toggle>
+        <mat-datepicker #pickerReintegro></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="input">
+        <mat-label>Observaciones</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="button-container">
+      <button mat-raised-button color="warn">Solicitar</button>
+    </div>
+  </form>
+</div>
